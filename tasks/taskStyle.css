@@ -162,4 +162,6 @@ main{
     transform: translateX(-50%);
     background-color: orange;
     padding: 25px 20px;
+    height: 300px;
+    border-radius: 10px;
 }   
