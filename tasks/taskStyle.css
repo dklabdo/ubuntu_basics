@@ -45,7 +45,6 @@ main{
     justify-content: center;
     align-items: center;
     margin-bottom: 150px;
-    background-color: rgba(255, 255, 255, 0.445);
     height: 500px;
     top: 50%;
     transform: translateY(-50%);
@@ -128,7 +127,11 @@ main{
         flex-direction: column;
     }
     main{
+       
         height: 700px;
+    }
+    .task2{
+        flex-direction: column;
     }
 }
 
@@ -136,5 +139,12 @@ main{
     .res{
         width: 200px;
     }
+
 }
 
+
+.task2{
+    display: flex;
+    align-items: center;
+    
+}
