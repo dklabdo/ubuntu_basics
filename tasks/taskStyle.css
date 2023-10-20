@@ -11,6 +11,7 @@ body{
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
+    background-position: center;
 
 }
 h1{
@@ -139,19 +140,27 @@ main{
     .res{
         width: 200px;
     }
-
-}
-
-
-.task2{
-    display: flex;
-    align-items: center;
-    align-items: center;
-    justify-content: center;
-
     
+
 }
 
-.task2 ul{
-    width: 100%;
+
+
+
+.my{
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+
 }
+
+.data2{
+    top: 50px;
+    width: fit-content;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.371);
+    padding: 15px 10px;
+}   
