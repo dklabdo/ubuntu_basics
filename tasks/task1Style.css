@@ -1,0 +1,140 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Courier New', Courier, monospace;
+    color: white;
+}
+
+body{
+    
+    background-image: url(/tasks/task1/28701977_7385225.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+
+}
+h1{
+    font-size: 30px;
+    color: black;
+    
+}
+h2{
+    font-size: 22px;
+    color: black;
+}
+p{
+  color: black;
+  
+}
+header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 400px;
+}
+header h1{
+    text-align: center;
+    margin: 10px 10px;
+}
+main{
+    width: 80%;
+    position: relative;
+    left: 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 150px;
+    background-color: rgba(255, 255, 255, 0.445);
+    height: 500px;
+    top: 50%;
+    transform: translateY(-50%);
+
+    
+}
+
+.download{
+    padding: 12px 15px;
+    background-color: orange;
+    border-radius: 15px;
+    text-decoration: none;
+
+}
+
+.into{
+    position: absolute;
+    top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+    align-items: center;
+
+}
+
+.content{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40%;
+    top: 50px;
+
+}
+
+.content img{
+    width: 300px;
+}
+
+.content form{
+    color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    
+}
+
+.btn{
+    width: 150px;
+    height: 30px;
+    border: none;
+    border-radius: 15px;
+    background-color: orange;
+    margin: 10px 0;
+}
+.btn:hover{
+    transform: scale(1.08);
+    background-color: rgb(164, 108, 5);
+}
+
+.res{
+    height: 30px;
+    width: 300PX;
+    padding: 6PX;
+    border-radius: 15px;
+    border: none;
+    box-shadow: 2px 2px 5px black;
+    color: black;
+}
+
+.res:focus{
+    border: none;
+    outline: none;
+}
+
+@media (max-width:1000px){
+    .content{
+        flex-direction: column;
+    }
+    main{
+        height: 700px;
+    }
+}
+
+@media (max-width:438px){
+    .res{
+        width: 200px;
+    }
+}
+

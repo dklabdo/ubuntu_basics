@@ -1,0 +1,1256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ubuntu commands</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+    <nav>
+        <svg id="sideBarBtn" class="nav-img" xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M80-160v-160h160v160H80Zm240 0v-160h560v160H320ZM80-400v-160h160v160H80Zm240 0v-160h560v160H320ZM80-640v-160h160v160H80Zm240 0v-160h560v160H320Z"/></svg>
+        <h1 onclick="location.reload()" >Ubuntu</h1>
+        <svg class="bg-img" xmlns="http://www.w3.org/2000/svg" width="28" height="317" viewBox="0 0 327 317" fill="orange">
+            <path d="M113.334 316.02C84.7499 315.867 55.8335 300.521 42.8336 290.02C29.8336 279.52 23.8336 273.52 16.8336 263.02C9.83358 252.52 3.55149 240.936 1.33364 220.52C-0.884204 200.104 0.333623 132.02 0.333628 127.52C0.333633 123.02 1.83361 118.02 1.83361 118.02C4.33359 111.02 6.83361 110.181 10.3336 108.6C13.8336 107.02 31.3336 106.02 35.8336 109.52C40.3336 113.02 40.8336 114.02 42.3336 119.52L42.8336 127.52C42.8336 127.52 40.3335 185.02 44.3336 209.02C48.3336 233.02 53.2822 242.832 68.3336 255.52C83.385 268.209 95.4116 270.809 113.334 271.52C131.256 272.232 146.773 265.994 162.334 255.52C177.895 245.047 185.579 225.267 187.334 209.02C189.088 192.773 188.942 161.534 189.334 127.52C189.334 127.52 189.334 122.52 190.334 118.52C191.334 114.52 197.834 105.52 211.834 106.02C225.834 106.52 230.334 114.52 231.834 119.02C233.334 123.52 233.334 127.52 233.334 127.52C233.334 127.52 235.834 203.02 232.334 219.52C228.834 236.02 226.805 242.017 214.834 263.02C207.53 273.818 201.955 279.672 191.334 290.02C183.387 295.842 175.994 300.459 168.834 304.085C150.592 313.324 133.86 316.131 113.334 316.02Z" fill="#D78F09"/>
+            <path d="M213.531 0.983078C242.115 1.13672 271.032 16.4829 284.031 26.983C297.031 37.4832 303.031 43.4832 310.031 53.9832C317.031 64.4832 323.314 76.0672 325.531 96.4833C327.749 116.899 326.531 184.983 326.531 189.483C326.531 193.983 325.031 198.983 325.031 198.983C322.531 205.983 320.031 206.823 316.531 208.403C313.031 209.983 295.531 210.983 291.031 207.483C286.531 203.983 286.031 202.983 284.531 197.483L284.031 189.483C284.031 189.483 286.532 131.983 282.531 107.983C278.531 83.9835 273.583 74.1714 258.531 61.4831C243.48 48.7948 231.453 46.1947 213.531 45.4832C195.61 44.7716 180.092 51.0094 164.531 61.4831C148.97 71.9568 141.286 91.7362 139.531 107.983C137.777 124.23 137.923 155.469 137.531 189.483C137.531 189.483 137.531 194.483 136.531 198.483C135.531 202.483 129.031 211.483 115.031 210.983C101.031 210.483 96.5314 202.483 95.0314 197.983C93.5314 193.483 93.5314 189.483 93.5314 189.483C93.5314 189.483 91.0314 113.983 94.5314 97.4832C98.0314 80.983 100.06 74.9861 112.031 53.9832C119.335 43.1853 124.91 37.3317 135.531 26.983C143.478 21.1619 150.871 16.5445 158.031 12.918C176.273 3.6792 193.005 0.872742 213.531 0.983078Z" fill="#D78F09"/>
+        </svg>
+    </nav>
+    <aside id="sideBar">
+        <button id="btn0" onclick="display(0)">Basics</button>
+        <button id="btn1" onclick="display(1)">Navigation (cd,pwd)</button>
+        <button id="btn2" onclick="display(2)">ls</button>
+        <button id="btn3" onclick="display(3)">create and remove</button>
+        <button id="btn4" onclick="display(4)">rename copy <br>cut</button>
+        <button id="btn5" onclick="display(5)">ln (links)</button>
+        <button id="btn6" onclick="display(6)">tail,less,wc</button>
+        <button id="btn9" onclick="display(7)">grep,sort</button>
+        <button id="btn10" onclick="display(8)">diff uniq <br>pipes</button>
+        <button id="btn11" onclick="display(9)">output command</button>
+        <button id="btn12" onclick="display(10)">acces rules</button>
+
+    </aside>
+    <main>
+        <section id="s0">
+            <h2>#1 Terminals</h2>
+            <p>In Ubuntu, the "terminal" typically refers to a command-line interface that allows you to interact with your computer using text commands. The terminal in Ubuntu is often used for tasks such as running commands, managing files, installing software, and configuring system settings. <br> Ubuntu comes with a default terminal emulator called GNOME Terminal, which provides a text-based interface to the Linux operating system. You can open the terminal in Ubuntu by using keyboard shortcuts like Ctrl+Alt+T or by searching for "Terminal" in the applications menu. </p>
+            <p>First time when you open your terminal :</p>
+            <div class="container">
+                <div class="container_terminal"></div>
+                <div class="terminal_toolbar">
+                    <div class="butt">
+                        <button class="btn btn-color"></button>
+                        <button class="btn"></button>
+                        <button class="btn"></button>
+                    </div>
+                    <p class="user" style="margin-left: 20px;">Terminal</p>
+                </div>
+                <div class="terminal_body">
+                    <div class="terminal_promt">
+                        <span class="terminal_user">abdo@admin:</span>
+                        <span class="terminal_location">~</span>
+                        <span class="terminal_bling">$</span>
+                        <span class="terminal_cursor"></span>
+                    </div>
+                </div>
+            </div>
+            <h2>man is your loyal friend during this course</h2>
+            <div class="container">
+                <div class="container_terminal"></div>
+                <div class="terminal_toolbar">
+                    <div class="butt">
+                        <button class="btn btn-color"></button>
+                        <button class="btn"></button>
+                        <button class="btn"></button>
+                    </div>
+                    <p class="user" style="margin-left: 20px;">Terminal</p>
+                </div>
+                <div class="terminal_body">
+                    <div class="terminal_promt">
+                        <span class="terminal_user">abdo@admin:</span>
+                        <span class="terminal_location">~</span>
+                        <span class="terminal_bling">$ man command_name <span style="color: #9a9a9a;"># will give an information about the command</span></span>
+                        <span class="terminal_cursor"></span>
+                    </div>
+                </div>
+            </div>
+            <p>lets put the terminal appart for a while and lets talk about directorys and files in linux</p>
+            <h2>Files:</h2>
+            <ul>
+                <li>A file is a collection of data that can be text, binary, or any other type of information. Files can contain documents, programs, images, audio, video, and more.</li>
+                <li>Files have content, which can be modified, viewed, and manipulated using various commands and applications.</li>
+                <li>Files can have different permissions that control who can read, write, or execute them.</li>
+                <li>Examples of files include text documents (e.g., .txt, .pdf), program executables (e.g., .exe), and multimedia files (e.g., .jpg, .mp3).</li>
+            </ul>
+            <h2>Directory:</h2>
+            <ul>
+                <li>A directory, often referred to as a folder, is a special type of file that is used to organize and store other files and directories.</li>
+                <li>Directories do not contain data like files; instead, they hold references or pointers to other files and directories.</li>
+                <li>Directories are hierarchical in nature, allowing for a structured organization of files and subdirectories.</li>
+                <li>Directories also have permissions that control access and modification.</li>
+                <li>Examples of directories include your home directory (e.g., /home/username) and system directories (e.g., /usr/bin).</li>
+            </ul>
+
+            <h2>Path in linux :</h2>
+            <p>In Linux, a path refers to the location of a file or directory within the file system. Paths are used to specify the precise location of a file or directory, allowing users and applications to navigate and access them. Linux uses a hierarchical directory structure, with the root directory at the top, represented by a forward slash ("/").</p>
+            <img src="/assets/linux_img_path.png" alt="none" width="300px">
+            <p>Exemple the path of images is : <br> /Home/images </p>
+            <p>Do your want visit the images directory ??</p>
+            <button onclick="display(1)">Next chapter</button>
+        </section>
+        <section id="s1" class="hidden">
+            <button onclick="display(0)">Previous chapter</button>
+            <h2>#2 cd and pwd</h2>
+            <p>In Ubuntu, the "cd" command is used to change the current directory within the Terminal. Here's how you can use it:</p>
+            <div class="container">
+                <div class="container_terminal"></div>
+                <div class="terminal_toolbar">
+                    <div class="butt">
+                        <button class="btn btn-color"></button>
+                        <button class="btn"></button>
+                        <button class="btn"></button>
+                    </div>
+                    <p class="user" style="margin-left: 20px;">Terminal</p>
+                </div>
+                <div class="terminal_body">
+                    <div class="terminal_promt">
+                        <span class="terminal_user">abdo@admin:</span>
+                        <span class="terminal_location">~</span>
+                        <span class="terminal_bling">$ cd directory_path</span>
+                        <span class="terminal_cursor"></span>
+                    </div>
+                </div>
+            </div>
+            <p>To navigate to a specific directory: <br>for exemple you have a directory cald document in your desktop</p>
+            <div class="container">
+                <div class="container_terminal"></div>
+                <div class="terminal_toolbar">
+                    <div class="butt">
+                        <button class="btn btn-color"></button>
+                        <button class="btn"></button>
+                        <button class="btn"></button>
+                    </div>
+                    <p class="user" style="margin-left: 20px;">Terminal</p>
+                </div>
+                <div class="terminal_body">
+                    <div class="terminal_promt">
+                        <span class="terminal_user">abdo@admin:</span>
+                        <span class="terminal_location">~</span>
+                        <span class="terminal_bling">$ cd /Home/Desktop/document</span>
+                        <span class="terminal_cursor"></span>
+                    </div>
+                </div>
+            </div>
+            <p>Replace /Home/Desktop/document with the easiest way. For example, to change to a directory named "documents" in your home directory, you can use:</p>
+            <div class="container">
+                <div class="container_terminal"></div>
+                <div class="terminal_toolbar">
+                    <div class="butt">
+                        <button class="btn btn-color"></button>
+                        <button class="btn"></button>
+                        <button class="btn"></button>
+                    </div>
+                    <p class="user" style="margin-left: 20px;">Terminal</p>
+                </div>
+                <div class="terminal_body">
+                    <div class="terminal_promt">
+                        <span class="terminal_user">abdo@admin:</span>
+                        <span class="terminal_location">~</span>
+                        <span class="terminal_bling">$ cd ~/document</span>
+                        <span class="terminal_cursor"></span>
+                    </div>
+                </div>
+            </div>
+            <p>To navigate to the parent directory:</p>
+            <div class="container">
+                <div class="container_terminal"></div>
+                <div class="terminal_toolbar">
+                    <div class="butt">
+                        <button class="btn btn-color"></button>
+                        <button class="btn"></button>
+                        <button class="btn"></button>
+                    </div>
+                    <p class="user" style="margin-left: 20px;">Terminal</p>
+                </div>
+                <div class="terminal_body">
+                    <div class="terminal_promt">
+                        <span class="terminal_user">abdo@admin/Home/Desktop/document:</span>
+                        <span class="terminal_location">~</span>
+                        <span class="terminal_bling">$ cd ..</span>
+                        <span class="terminal_cursor"></span>
+                    </div>
+                </div>
+            </div>
+            <p>The result :</p>
+            <div class="container">
+                <div class="container_terminal"></div>
+                <div class="terminal_toolbar">
+                    <div class="butt">
+                        <button class="btn btn-color"></button>
+                        <button class="btn"></button>
+                        <button class="btn"></button>
+                    </div>
+                    <p class="user" style="margin-left: 20px;">Terminal</p>
+                </div>
+                <div class="terminal_body">
+                    <div class="terminal_promt">
+                        <span class="terminal_user">abdo@admin/Home/Desktop:</span>
+                        <span class="terminal_location">~</span>
+                        <span class="terminal_bling">$</span>
+                        <span class="terminal_cursor"></span>
+                    </div>
+                </div>
+            </div>
+            <p>To navigate to the previous directory: <br>This command takes you back to the directory you were in before the last cd command.</p>
+            <div class="container">
+                <div class="container_terminal"></div>
+                <div class="terminal_toolbar">
+                    <div class="butt">
+                        <button class="btn btn-color"></button>
+                        <button class="btn"></button>
+                        <button class="btn"></button>
+                    </div>
+                    <p class="user" style="margin-left: 20px;">Terminal</p>
+                </div>
+                <div class="terminal_body">
+                    <div class="terminal_promt">
+                        <span class="terminal_user">abdo@admin/Home/Desktop:</span>
+                        <span class="terminal_location">~</span>
+                        <span class="terminal_bling">$ cd -</span>
+                        <span class="terminal_cursor"></span>
+                    </div>
+                </div>
+            </div>
+            <p>The result :</p>
+            <div class="container">
+                <div class="container_terminal"></div>
+                <div class="terminal_toolbar">
+                    <div class="butt">
+                        <button class="btn btn-color"></button>
+                        <button class="btn"></button>
+                        <button class="btn"></button>
+                    </div>
+                    <p class="user" style="margin-left: 20px;">Terminal</p>
+                </div>
+                <div class="terminal_body">
+                    <div class="terminal_promt">
+                        <span class="terminal_user">abdo@admin/Home/Desktop:</span>
+                        <span class="terminal_location">~</span>
+                        <span class="terminal_bling">$ <span style="color: gray;"># becouse the last cd take you to 'abdo@admin/Home/Desktop'</span> </span>
+                        <span class="terminal_cursor"></span>
+                    </div>
+                </div>
+            </div>
+            <p>In Ubuntu and other Linux distributions, the pwd command is used to print the current working directory in the terminal. The current working directory is the directory within the file system where your terminal session is currently located. This command is especially useful when you want to verify your location in the directory structure or if you need to reference the current directory in a script or command.</p>
+            <div class="container">
+                <div class="container_terminal"></div>
+                <div class="terminal_toolbar">
+                    <div class="butt">
+                        <button class="btn btn-color"></button>
+                        <button class="btn"></button>
+                        <button class="btn"></button>
+                    </div>
+                    <p class="user" style="margin-left: 20px;">Terminal</p>
+                </div>
+                <div class="terminal_body">
+                    <div class="terminal_promt">
+                        <span class="terminal_user">abdo@admin/Home/Desktop:</span>
+                        <span class="terminal_location">~</span>
+                        <span class="terminal_bling">$ pwd </span>
+                        <span class="terminal_cursor"></span>
+                    </div>
+                </div>
+            </div>
+            <button onclick="display(2)">Next chapter</button>
+        </section>
+
+        <section id="s2" class="hidden">
+            <button onclick="display(1)">Previous chapter</button>
+            <h2>#3 Ls</h2>
+            <p>in Ubuntu and other Linux-based operating systems, the ls command is used to list the contents of a directory. It is a fundamental command for navigating and examining the files and directories in your file system. ls provides various options and arguments to customize the listing according to your needs. Here are some common usages of the ls command:</p>
+            <div class="container">
+                <div class="container_terminal"></div>
+                <div class="terminal_toolbar">
+                    <div class="butt">
+                        <button class="btn btn-color"></button>
+                        <button class="btn"></button>
+                        <button class="btn"></button>
+                    </div>
+                    <p class="user" style="margin-left: 20px;">Terminal</p>
+                </div>
+                <div class="terminal_body">
+                    <div class="terminal_promt">
+                        <span class="terminal_user">abdo@admin/Home/Desktop:</span>
+                        <span class="terminal_location">~</span>
+                        <span class="terminal_bling">$ ls directory_path</span>
+                        <span class="terminal_cursor"></span>
+                    </div>
+                </div>
+            </div>
+            <div style="background-color: rgba(255, 255, 255, 0.076); padding: 25px; border-radius: 15px; margin-bottom: 25px;">
+                <h2>List hidden files and directories</h2>
+                <p>ls -a  : By default, ls does not show hidden files and directories (those whose names start with a dot, e.g., .file). The -a option displays hidden items. <br>ls -X list by file extention</p>
+                <div class="terminal_body">
+                    <p>document.pdf  image.jpg  code.c  backup.tar.gz</p>
+                </div>
+                <h2>Long format listing</h2>
+                <p>The -l option provides a more detailed, long-format listing that includes file permissions, owner, group, file size, modification date, and the file or directory name. <br>-l is the most used ls option in ubuntu </p>
+                <div class="terminal_body">
+                    <p> Total 16 <br>
+                        drwxr-xr-x 2 user user 4096 Oct  1 12:34 directory1 <br>
+                        -rw-r--r-- 1 user user 1234 Oct  2 09:45 file1.txt <br>
+                        -rw-r--r-- 1 user user 5678 Oct  2 09:46 file2.txt <br>
+                        drwxr-xr-x 3 user user 8192 Oct  3 15:27 directory2</p>
+                </div>
+                <p>(total 16) the sum of the sizes of all the files and directories listed below in Ko</p>
+                <p>(drwxr-xr-x) The first part, "drwxr-xr-x," represents the permissions of the directory. In this case, "d" indicates it's a directory, and the following characters indicate read, write, and execute permissions</p>
+                <p>(2) The number 2 represents the number of hard links to this directory</p>
+                <p>(user) The owner of the directory is the user</p>
+                <p>(user) The group associated with the directory is also user</p>
+                <p>(4096)  The size of the directory in bytes is 4096.</p>
+                <p>(Oct 1 12:34) The modification date of the directory, which is October 1st at 12:34</p>
+                <h2>List files and directories by inode number</h2>
+                <p>The -i option displays the inode number for each file and directory. Inode numbers are unique identifiers for file system objects.</p>
+                <div class="terminal_body">
+                    1416728 directory1 <br>
+                    1416730 file1.txt <br>
+                    1416731 file2.txt <br>
+                    1416729 directory2 <br>
+                </div>
+                <h2>List in reverse order</h2>
+                <p>The -r option reverses the order of the listing, displaying items in reverse alphabetical order.</p>
+                <h2>List by modification time</h2>
+                <p>The -t option sorts the list by modification time, showing the most recently modified items first.</p>
+                <h2>List by size</h2>
+                <p>The -S option sorts the list by file size, displaying the largest items first. <br> The -s option displays the size of each file in bytes.</p>
+                <div class="terminal_body">
+                    <p>
+                        total 16 <br>
+                        4 directory1 <br>
+                        1 file1.txt <br>
+                        6 file2.txt <br>
+                        8 directory2
+                    </p>
+                </div>
+                <br>
+                
+                <h2>List by acces and change time</h2>
+                <p>The -lu option sorts the list by access time (atime), showing the most recently accessed items first. <br>The -lc option sorts the list by status change time (ctime), showing the most recently changed items first.</p>
+                <h2>List only directories</h2>
+                <p>The -d  option lists only directories and omits regular files from the output.</p>
+                <div class="terminal_body">
+                    directory1 <br>
+                    directory2
+                </div>
+
+                <p>now you know how to list directory and files but to creat them ??</p>
+                
+            
+            
+            </div>
+
+            <button onclick="display(3)">Next chapter</button>
+        </section>
+        <section id="s3" class="hidden">
+            <button onclick="display(2)">Previous chapter</button>
+            <h2>#4 mkdir,mdir,touch</h2>
+            <p>Hi, now we gonna talk about creating and deleaiting</p>
+            <h2>1 Create</h2>
+            <p>mkdir is used to create a new directory (folder) in the system.</p>
+            <div class="container">
+                <div class="container_terminal"></div>
+                <div class="terminal_toolbar">
+                    <div class="butt">
+                        <button class="btn btn-color"></button>
+                        <button class="btn"></button>
+                        <button class="btn"></button>
+                    </div>
+                    <p class="user" style="margin-left: 20px;">Terminal</p>
+                </div>
+                <div class="terminal_body">
+                    <div class="terminal_promt">
+                        <span class="terminal_user">abdo@admin:</span>
+                        <span class="terminal_location">~</span>
+                        <span class="terminal_bling">$ mkdir directory_name</span>
+                        <span class="terminal_cursor"></span>
+                    </div>
+                </div>
+            </div>
+            <p> is used to create an empty file or update the access and modification times of an existing file. It's often used to create an empty file.</p>
+            <div class="container">
+                <div class="container_terminal"></div>
+                <div class="terminal_toolbar">
+                    <div class="butt">
+                        <button class="btn btn-color"></button>
+                        <button class="btn"></button>
+                        <button class="btn"></button>
+                    </div>
+                    <p class="user" style="margin-left: 20px;">Terminal</p>
+                </div>
+                <div class="terminal_body">
+                    <div class="terminal_promt">
+                        <span class="terminal_user">abdo@admin:</span>
+                        <span class="terminal_location">~</span>
+                        <span class="terminal_bling">$ touch file_name</span>
+                        <span class="terminal_cursor"></span>
+                    </div>
+                </div>
+            </div>
+            <h2>2 Remove</h2>
+
+            <p>rmdir is used to remove empty directories (folders).</p>
+            <div class="container">
+                <div class="container_terminal"></div>
+                <div class="terminal_toolbar">
+                    <div class="butt">
+                        <button class="btn btn-color"></button>
+                        <button class="btn"></button>
+                        <button class="btn"></button>
+                    </div>
+                    <p class="user" style="margin-left: 20px;">Terminal</p>
+                </div>
+                <div class="terminal_body">
+                    <div class="terminal_promt">
+                        <span class="terminal_user">abdo@admin:</span>
+                        <span class="terminal_location">~</span>
+                        <span class="terminal_bling">$ rmdir directory_name</span>
+                        <span class="terminal_cursor"></span>
+                    </div>
+                </div>
+            </div>
+            
+            <p>To remove a file, you can simply use the rm command followed by the name of the file you want to delete. For example:</p>
+            <div class="container">
+                <div class="container_terminal"></div>
+                <div class="terminal_toolbar">
+                    <div class="butt">
+                        <button class="btn btn-color"></button>
+                        <button class="btn"></button>
+                        <button class="btn"></button>
+                    </div>
+                    <p class="user" style="margin-left: 20px;">Terminal</p>
+                </div>
+                <div class="terminal_body">
+                    <div class="terminal_promt">
+                        <span class="terminal_user">abdo@admin:</span>
+                        <span class="terminal_location">~</span>
+                        <span class="terminal_bling">$ rm file_name</span>
+                        <span class="terminal_cursor"></span>
+                    </div>
+                </div>
+            </div>
+            <div  style="background-color: rgba(255, 255, 255, 0.076); padding: 25px; border-radius: 15px; margin-bottom: 25px;">
+                <h2>Special case</h2>
+                <p>To remove a directory, you can use the -r (or -R) option to recursively remove its contents. For example:</p>
+                <div class="container">
+                    <div class="container_terminal"></div>
+                    <div class="terminal_toolbar">
+                        <div class="butt">
+                            <button class="btn btn-color"></button>
+                            <button class="btn"></button>
+                            <button class="btn"></button>
+                        </div>
+                        <p class="user" style="margin-left: 20px;">Terminal</p>
+                    </div>
+                    <div class="terminal_body">
+                        <div class="terminal_promt">
+                            <span class="terminal_user">abdo@admin:</span>
+                            <span class="terminal_location">~</span>
+                            <span class="terminal_bling">$ rm -r directory_name</span>
+                            <span class="terminal_cursor"></span>
+                        </div>
+                    </div>
+                </div>
+                <p>mkdir -p Create parent directories if they don't exist</p>
+                <div class="container">
+                    <div class="container_terminal"></div>
+                    <div class="terminal_toolbar">
+                        <div class="butt">
+                            <button class="btn btn-color"></button>
+                            <button class="btn"></button>
+                            <button class="btn"></button>
+                        </div>
+                        <p class="user" style="margin-left: 20px;">Terminal</p>
+                    </div>
+                    <div class="terminal_body">
+                        <div class="terminal_promt">
+                            <span class="terminal_user">abdo@admin:</span>
+                            <span class="terminal_location">~</span>
+                            <span class="terminal_bling">$ mkdir -p dir1/dir2</span>
+                            <span class="terminal_cursor"></span>
+                        </div>
+                    </div>
+                </div>
+                <p>the same thing with rmdir -p</p>
+
+                <p>rm -r To enable interactive mode and prompt for confirmation before deleting each file, you can use the -i option. For example:</p>
+                <div class="container">
+                    <div class="container_terminal"></div>
+                    <div class="terminal_toolbar">
+                        <div class="butt">
+                            <button class="btn btn-color"></button>
+                            <button class="btn"></button>
+                            <button class="btn"></button>
+                        </div>
+                        <p class="user" style="margin-left: 20px;">Terminal</p>
+                    </div>
+                    <div class="terminal_body">
+                        <div class="terminal_promt">
+                            <span class="terminal_user">abdo@admin:</span>
+                            <span class="terminal_location">~</span>
+                            <span class="terminal_bling">$ rm -i file.txt</span>
+                            <span class="terminal_cursor"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <button onclick="display(4)">Next chapter</button>
+        </section>
+
+        <section id="s4" class="hidden">
+            <button onclick="(display(3))">Previous chapter</button>
+            <h2>#5 Rename copy cuts</h2>
+            <h2> 1 Rename :</h2>
+            <p>se the mv (move) command to rename the file or directory. For example, to rename a file from "oldfile.txt" to "newfile.txt", you can use the following command:</p>
+            <div class="container">
+                <div class="container_terminal"></div>
+                <div class="terminal_toolbar">
+                    <div class="butt">
+                        <button class="btn btn-color"></button>
+                        <button class="btn"></button>
+                        <button class="btn"></button>
+                    </div>
+                    <p class="user" style="margin-left: 20px;">Terminal</p>
+                </div>
+                <div class="terminal_body">
+                    <div class="terminal_promt">
+                        <span class="terminal_user">abdo@admin:</span>
+                        <span class="terminal_location">~</span>
+                        <span class="terminal_bling">$ mv oldfile.txt newfile.txt</span>
+                        <span class="terminal_cursor"></span>
+                    </div>
+                </div>
+            </div>
+            <h2>2 Copying a File or Directory :</h2>
+            <p>Use the cp (copy) command to copy a file or directory. For example, to copy a file named "file.txt" to a directory named "backup," you can use the following command</p>
+            <div class="container">
+                <div class="container_terminal"></div>
+                <div class="terminal_toolbar">
+                    <div class="butt">
+                        <button class="btn btn-color"></button>
+                        <button class="btn"></button>
+                        <button class="btn"></button>
+                    </div>
+                    <p class="user" style="margin-left: 20px;">Terminal</p>
+                </div>
+                <div class="terminal_body">
+                    <div class="terminal_promt">
+                        <span class="terminal_user">abdo@admin:</span>
+                        <span class="terminal_location">~</span>
+                        <span class="terminal_bling">$ cp file.txt backup/</span>
+                        <span class="terminal_cursor"></span>
+                    </div>
+                </div>
+            </div>
+
+            <h2>3 Cutting a File or Directory (Moving):</h2>
+            <p>Use the mv (move) command to cut and move a file or directory. For example, to move a file named "file.txt" to a directory named "archive," you can use the following command:</p>
+            <div class="container">
+                <div class="container_terminal"></div>
+                <div class="terminal_toolbar">
+                    <div class="butt">
+                        <button class="btn btn-color"></button>
+                        <button class="btn"></button>
+                        <button class="btn"></button>
+                    </div>
+                    <p class="user" style="margin-left: 20px;">Terminal</p>
+                </div>
+                <div class="terminal_body">
+                    <div class="terminal_promt">
+                        <span class="terminal_user">abdo@admin:</span>
+                        <span class="terminal_location">~</span>
+                        <span class="terminal_bling">$ mv file.txt archive/</span>
+                        <span class="terminal_cursor"></span>
+                    </div>
+                </div>
+            </div>
+            <p>Remember that when you use the mv command to move a file or directory, it effectively "cuts" it from the source location and "pastes" it into the destination location.</p>
+            <p>These file management operations are essential for organizing and maintaining your files and directories in Ubuntu, making it easier to work with your data efficiently.</p>
+            <div class="terminal_body">
+                <p>mv [OPTION]... SOURCE DEST <br>cp [OPTION]... SOURCE DEST
+                </p>
+            </div>
+            <p>
+                1- SOURCE: is the file or directory you want to move or rename. <br>
+                2- DEST: is the destination where you want to move the SOURCE. <br> If DEST is an existing directory, SOURCE will be moved into that directory.If DEST is a non-existing filename, SOURCE will be renamed to DEST.
+            </p>
+
+            <div style="background-color: rgba(255, 255, 255, 0.076); padding: 25px; border-radius: 15px; margin-bottom: 25px;">
+                <h2>Options for mv :</h2>
+                <ul style="padding-left: 20px;">
+                    <li>-i (interactive): This option prompts you for confirmation before overwriting an existing file in the destination.</li>
+                    <li>-u (update): This option moves the SOURCE only when the SOURCE file is newer or the DEST file is missing.</li>
+                    <li>-b (backup): This option creates a backup of an existing DEST file before overwriting it.</li>
+                    <li>-v (verbose): This option makes mv print the name of each file as it's moved.</li>
+                    <li>-t (target directory): This option is used to specify the target directory explicitly. It allows you to move multiple sources into a single destination directory.</li>
+
+                </ul>
+                <br>
+                <h2>Options for cp :</h2>
+                <ul style="padding: 20px;">
+                    <li>-i (interactive): This option prompts you for confirmation before overwriting an existing file in the destination.</li>
+                    <li>-r or -R (recursive): This option is used to copy directories and their contents recursively. <br> <span style="color: rgb(172, 172, 172);">this is the most important</span></li>
+                    <li>-u (update): This option copies the SOURCE only when the SOURCE file is newer than the DEST file or the DEST file is missing.</li>
+                    <li>-v (verbose): This option makes cp print the name of each file as it's copied.</li>
+                    <li>-p: This option preserves file attributes such as timestamps and permissions during the copy.</li>
+                </ul>
+            </div>
+
+            <button onclick="(display(5))">Previous chapter</button>
+        </section>
+        <section id="s5" class="hidden">
+
+            <button onclick="display(4)">Previous chapter</button>
+            <h2>#6 Links</h2>
+            <p>In Ubuntu, you can create symbolic links and hard links to files and directories using the ln command. Links are useful for creating references to files and directories, allowing you to access them from different locations in the file system. There are two main types of links in Ubuntu: symbolic links and hard links.</p>
+            <h2>1 Symbolic Links (Soft Links):</h2>
+            <ul style="padding-left: 20px;">
+                <li>Symbolic links are references to files or directories by their pathname.</li>
+                <li>They act as shortcuts or references to the target files or directories.</li>
+                <li>Symbolic links can span across different file systems.</li>
+                <li>They can link to directories, files, and even non-existent paths.</li>
+            </ul>
+            <br>
+            <p>To create a symbolic link, you can use the ln command with the -s option:</p>
+            <div class="container">
+                <div class="container_terminal"></div>
+                <div class="terminal_toolbar">
+                    <div class="butt">
+                        <button class="btn btn-color"></button>
+                        <button class="btn"></button>
+                        <button class="btn"></button>
+                    </div>
+                    <p class="user" style="margin-left: 20px;">Terminal</p>
+                </div>
+                <div class="terminal_body">
+                    <div class="terminal_promt">
+                        <span class="terminal_user">abdo@admin:</span>
+                        <span class="terminal_location">~</span>
+                        <span class="terminal_bling">$ ln -s [TARGET] [LINK_NAME]</span>
+                        <span class="terminal_cursor"></span>
+                    </div>
+                </div>
+            </div>
+
+            <br>
+            <h2>2 Hard Links:</h2>
+            <ul style="padding-left: 20px;">
+                <li>Hard links are references to the same inode on the file system.</li>
+                <li>They essentially create multiple directory entries for the same data on disk.</li>
+                <li>Hard links can only be created for files, not directories.</li>
+                <li>They can only link to files within the same file system.</li>
+
+            </ul>
+            <p>To create a hard link, you can use the ln command without any special options:</p>
+            <br>
+            <div class="container">
+                <div class="container_terminal"></div>
+                <div class="terminal_toolbar">
+                    <div class="butt">
+                        <button class="btn btn-color"></button>
+                        <button class="btn"></button>
+                        <button class="btn"></button>
+                    </div>
+                    <p class="user" style="margin-left: 20px;">Terminal</p>
+                </div>
+                <div class="terminal_body">
+                    <div class="terminal_promt">
+                        <span class="terminal_user">abdo@admin:</span>
+                        <span class="terminal_location">~</span>
+                        <span class="terminal_bling">$ ln [TARGET] [LINK_NAME]</span>
+                        <span class="terminal_cursor"></span>
+                    </div>
+                </div>
+            </div>
+
+            <p style="margin-bottom: 40px;">[TARGET] is the file or directory you want to create a link to.<br>[LINK_NAME] is the name of the symbolic link you want to create.</p>
+
+            <button onclick="display(6)">Next chapter</button>
+
+        </section>
+        <section id="s6" class="hidden">
+            <button onclick="display(5)">Previous chapter</button>
+            <h2>#7 tail,less</h2>
+            <p>In Ubuntu and other Linux-based systems, the tail and less commands are used to view and manipulate the content of text files. They serve different purposes, and I'll explain their functions and provide examples for each</p>
+            <h2>1 tail Command</h2>
+            <p>The tail command is used to display the end of a text file. By default, it shows the last 10 lines of a file, but you can specify a different number of lines to display. It is particularly useful for monitoring log files and real-time updates.</p>
+            <div class="container">
+                <div class="container_terminal"></div>
+                <div class="terminal_toolbar">
+                    <div class="butt">
+                        <button class="btn btn-color"></button>
+                        <button class="btn"></button>
+                        <button class="btn"></button>
+                    </div>
+                    <p class="user" style="margin-left: 20px;">Terminal</p>
+                </div>
+                <div class="terminal_body">
+                    <div class="terminal_promt">
+                        <span class="terminal_user">abdo@admin:</span>
+                        <span class="terminal_location">~</span>
+                        <span class="terminal_bling">$ tail [OPTION]... [FILE]...</span>
+                        <span class="terminal_cursor"></span>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div style="background-color: rgba(255, 255, 255, 0.076); padding: 25px; border-radius: 15px; margin-bottom: 25px;">
+                <h2>Common option :</h2>
+                <p>-n N: Display the last N lines of the file.</p>
+                <p>-f (follow): Display new lines as they are added to the file (useful for log files).</p>
+                <br>
+                <p>Exemple :</p>
+                <div class="container">
+                    <div class="container_terminal"></div>
+                    <div class="terminal_toolbar">
+                        <div class="butt">
+                            <button class="btn btn-color"></button>
+                            <button class="btn"></button>
+                            <button class="btn"></button>
+                        </div>
+                        <p class="user" style="margin-left: 20px;">Terminal</p>
+                    </div>
+                    <div class="terminal_body">
+                        <div class="terminal_promt">
+                            <span class="terminal_user">abdo@admin:</span>
+                            <span class="terminal_location">~</span>
+                            <span class="terminal_bling">$ tail -n 20 filename.txt</span>
+                            <span class="terminal_cursor"></span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <h2>2 less Command:</h2>
+            <p>The less command is a pager program that allows you to view the content of a file interactively. It's more versatile than tail and provides features like scrolling, searching, and navigation through the file's content.</p>
+            <div class="container">
+                <div class="container_terminal"></div>
+                <div class="terminal_toolbar">
+                    <div class="butt">
+                        <button class="btn btn-color"></button>
+                        <button class="btn"></button>
+                        <button class="btn"></button>
+                    </div>
+                    <p class="user" style="margin-left: 20px;">Terminal</p>
+                </div>
+                <div class="terminal_body">
+                    <div class="terminal_promt">
+                        <span class="terminal_user">abdo@admin:</span>
+                        <span class="terminal_location">~</span>
+                        <span class="terminal_bling">$ less [OPTIONS] [FILE]</span>
+                        <span class="terminal_cursor"></span>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div style="background-color: rgba(255, 255, 255, 0.076); padding: 25px; border-radius: 15px; margin-bottom: 25px;">
+                <h2>Common Navigation Keys (when viewing a file with less)</h2>
+                <ul style="padding-left: 20px;">
+                    <li>Arrow keys or j and k: Scroll up and down.</li>
+                    <li>spacebar: Page down.</li>
+                    <li>b: Page up.</li>
+                    <li>/search-term: Search for a specific term in the file.</li>
+                    <li>q: Quit less and return to the terminal.</li>
+                </ul>
+                <p>try those keys in your terminal <3</p>
+            </div>
+            <br>
+
+            <h2>3 WC command :</h2>
+            <p>In Ubuntu and other Linux-based systems, the wc command is used to count the number of lines, words, and characters in a file or text stream. The command is quite versatile and provides several options for displaying different types of counts. Here's the basic syntax and some common options for the wc command:</p>
+            <div class="container">
+                <div class="container_terminal"></div>
+                <div class="terminal_toolbar">
+                    <div class="butt">
+                        <button class="btn btn-color"></button>
+                        <button class="btn"></button>
+                        <button class="btn"></button>
+                    </div>
+                    <p class="user" style="margin-left: 20px;">Terminal</p>
+                </div>
+                <div class="terminal_body">
+                    <div class="terminal_promt">
+                        <span class="terminal_user">abdo@admin:</span>
+                        <span class="terminal_location">~</span>
+                        <span class="terminal_bling">$ wc [OPTION]... [FILE]...</span>
+                        <span class="terminal_cursor"></span>
+                    </div>
+                </div>
+            </div>
+            <p>Exemple: <br>We have a simple text file contain 'hello world'</p>
+            <div class="container">
+                <div class="container_terminal"></div>
+                <div class="terminal_toolbar">
+                    <div class="butt">
+                        <button class="btn btn-color"></button>
+                        <button class="btn"></button>
+                        <button class="btn"></button>
+                    </div>
+                    <p class="user" style="margin-left: 20px;">Terminal</p>
+                </div>
+                <div class="terminal_body">
+                    <div class="terminal_promt">
+                        <span class="terminal_user">abdo@admin:</span>
+                        <span class="terminal_location">~</span>
+                        <span class="terminal_bling">$ wc hello.txt</span>
+                        <span class="terminal_cursor"></span>
+                    </div>
+                </div>
+            </div>
+            <p>The result :</p>
+            <div class="terminal_body">
+                <p>1 2 12 hello.txt</p>
+            </div>
+            <p>
+                1 : one line <br>
+                2 : two word <br>
+                12 : 12 characters  <br>
+            </p>
+
+            <div style="background-color: rgba(255, 255, 255, 0.076); padding: 25px; border-radius: 15px; margin-bottom: 25px;">
+                <ul style="padding-left: 20px;">
+                    <li>-l or --lines: Display the count of lines.</li>
+                    <li>-w or --words: Display the count of words.</li>
+                    <li>-c or --bytes: Display the count of bytes (characters).</li>
+                    <li>-m or --chars: Display the count of characters.</li>
+                    <li>-L or --max-line-length: Display the length of the longest line.</li>
+                </ul>
+            </div>
+
+
+
+            <button onclick="display(7)">Next chapter</button>
+
+        </section>
+
+        <section id="s7" class="hidden">
+            <button onclick="display(6)" >Previous chapter</button>
+            <h2>#8 grep,sort</h2>
+            <p>grep is a command-line tool that allows you to find a string in a file or stream. It can be used with a regular expression to be more flexible at finding strings.</p>
+            <h2>How to use grep ??</h2>
+            <p>In the simplest case grep can be invoked as follows:</p>
+            <div class="container">
+                <div class="container_terminal"></div>
+                <div class="terminal_toolbar">
+                    <div class="butt">
+                        <button class="btn btn-color"></button>
+                        <button class="btn"></button>
+                        <button class="btn"></button>
+                    </div>
+                    <p class="user" style="margin-left: 20px;">Terminal</p>
+                </div>
+                <div class="terminal_body">
+                    <div class="terminal_promt">
+                        <span class="terminal_user">abdo@admin:</span>
+                        <span class="terminal_location">~</span>
+                        <span class="terminal_bling">$ grep 'STRING' filename</span>
+                        <span class="terminal_cursor"></span>
+                    </div>
+                </div>
+            </div>
+            <p>The above command searches the file for STRING and lists the lines that contain a match. <br>This is OK but it does not show the true power of grep. The above command only looks at one file. A cool example of using grep with multiple files would be to find all lines in all files in a given directory that contain the name of a person. This can be easily accomplished as follows:</p>
+            <div class="container">
+                <div class="container_terminal"></div>
+                <div class="terminal_toolbar">
+                    <div class="butt">
+                        <button class="btn btn-color"></button>
+                        <button class="btn"></button>
+                        <button class="btn"></button>
+                    </div>
+                    <p class="user" style="margin-left: 20px;">Terminal</p>
+                </div>
+                <div class="terminal_body">
+                    <div class="terminal_promt">
+                        <span class="terminal_user">abdo@admin:</span>
+                        <span class="terminal_location">~</span>
+                        <span class="terminal_bling">$ grep 'diab mohamed' *</span>
+                        <span class="terminal_cursor"></span>
+                    </div>
+                </div>
+            </div>
+            <p>The above command searches all files in the current directory for the name and lists all lines that contain a match. <br> <span style="color: #b2b2b2;">Notice the use of quotes in the above command. Quotes are not usually essential, but in this example they are essential because the name contains a space. Double quotes could also have been used in this example.</span></p>
+            <br>
+            <h2>What about regular expression ??</h2>
+            <div class="container">
+                <div class="container_terminal"></div>
+                <div class="terminal_toolbar">
+                    <div class="butt">
+                        <button class="btn btn-color"></button>
+                        <button class="btn"></button>
+                        <button class="btn"></button>
+                    </div>
+                    <p class="user" style="margin-left: 20px;">Terminal</p>
+                </div>
+                <div class="terminal_body">
+                    <div class="terminal_promt">
+                        <span class="terminal_user">abdo@admin:</span>
+                        <span class="terminal_location">~</span>
+                        <span class="terminal_bling">$ grep -E 'regular_expression'</span>
+                        <span class="terminal_cursor"></span>
+                    </div>
+                </div>
+            </div>
+            <div style="padding: 15px; border-radius: 15px;" class="markdown prose w-full break-words dark:prose-invert dark"><p>Regular expressions (regex or regexp) are a powerful tool used for pattern matching and text manipulation. They are a sequence of characters that defines a search pattern. Regular expressions are used in a variety of programming languages and text-processing utilities to search for, match, and manipulate text based on specific patterns. Here's an explanation of the key components and concepts of regular expressions:</p><ol><li><p><strong style="color: orange;">Literals</strong>: Most characters in a regular expression represent themselves. For example, the regex <code>abc</code> will match the string "abc" literally.</p></li><li><p><strong style="color: orange;">Metacharacters</strong>: Special characters with meanings in regular expressions are called metacharacters. Some common metacharacters include:</p><ul><li><code>.</code> (dot): Matches any single character except a newline.</li><li><code>*</code>: Matches zero or more occurrences of the preceding element.</li><li><code>+</code>: Matches one or more occurrences of the preceding element.</li><li><code>?</code>: Matches zero or one occurrence of the preceding element.</li><li><code>|</code> (pipe): Acts as an OR operator, allowing you to specify alternatives.</li><li><code>()</code> (parentheses): Groups elements together and sets their precedence.</li></ul></li><li><p><strong style="color: orange;">Character Classes</strong>: Character classes define sets of characters. For example:</p><ul><li><code>[abc]</code>: Matches any single character that is "a," "b," or "c."</li><li><code>[^abc]</code>: Matches any single character that is not "a," "b," or "c."</li><li><code>[0-9]</code>: Matches any single digit.</li><li><code>[a-z]</code>: Matches any single lowercase letter.</li></ul></li><li><p><strong style="color: orange;">Anchors</strong>: Anchors are used to specify the position within the text.</p><ul><li><code>^</code>: Matches the start of a line.</li><li><code>$</code>: Matches the end of a line.</li></ul></li><li><p><strong style="color: orange;" >Quantifiers</strong>: Quantifiers specify the number of occurrences of the preceding element.</p><ul><li><code>*</code>: Matches zero or more occurrences.</li><li><code>+</code>: Matches one or more occurrences.</li><li><code>?</code>: Matches zero or one occurrence.</li><li><code>{n}</code>: Matches exactly n occurrences.</li><li><code>{n,}</code>: Matches n or more occurrences.</li><li><code>{n,m}</code>: Matches between n and m occurrences.</li></ul></li><li><p><strong style="color: orange;">Escape Sequences</strong>: Some characters, like <code>.</code> or <code>*</code>, have special meanings in regular expressions. To match them literally, you need to escape them with a backslash, like <code>\.</code> or <code>\*</code>.</p></li><li><p><strong style="color: orange;">Predefined Character Classes</strong>: Regex engines often include predefined character classes for common patterns, such as digits, word characters, whitespace, and more. For example:</p><ul><li><code>\d</code>: Matches any digit (equivalent to <code>[0-9]</code>).</li><li><code>\w</code>: Matches any word character (letters, digits, or underscores).</li></ul></li><li><p><strong style="color: orange;">Grouping</strong>: Parentheses <code>()</code> are used to group elements together. This is useful for applying quantifiers to a group of characters or creating subpatterns.</p></li><li><p><strong style="color: orange;">Alternation</strong>: The pipe character <code>|</code> allows you to specify alternatives, such as <code>apple|banana</code> to match either "apple" or "banana."</p></li><li><p><strong style="color: orange;">Greedy and Non-Greedy Matching</strong>: By default, quantifiers are greedy, meaning they match as much as possible. You can make them non-greedy by adding a <code>?</code> after the quantifier, like <code>*?</code> or <code>+?</code>.</p></li></ol><p>Regular expressions are incredibly versatile and can be used in programming languages (e.g., Python, JavaScript, Perl) and text-processing utilities (e.g., <code>grep</code>, <code>sed</code>, <code>awk</code>) to search for patterns, extract data, and manipulate text efficiently. They are a valuable tool for working with textual data.</p></div>
+            <a style="font-size: 18px;" target="_blank" href="https://ubuntu.com/blog/regex-basics">Regex Basics by robin winlson official ubuntu doc</a>
+            <br>
+            <br>
+            <br>
+            <h2>Sort :</h2>
+            <p>In Ubuntu and other Linux-based systems, the sort command is used to sort lines of text in files or from standard input. It can be used to sort text in ascending or descending order based on various criteria, including alphabetical order, numerical order, and more. Here's how to use the sort command in Ubuntu:</p>
+            <div class="container">
+                <div class="container_terminal"></div>
+                <div class="terminal_toolbar">
+                    <div class="butt">
+                        <button class="btn btn-color"></button>
+                        <button class="btn"></button>
+                        <button class="btn"></button>
+                    </div>
+                    <p class="user" style="margin-left: 20px;">Terminal</p>
+                </div>
+                <div class="terminal_body">
+                    <div class="terminal_promt">
+                        <span class="terminal_user">abdo@admin:</span>
+                        <span class="terminal_location">~</span>
+                        <span class="terminal_bling">$ sort [OPTION]... [FILE]</span>
+                        <span class="terminal_cursor"></span>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div style="background-color: rgba(255, 255, 255, 0.076); padding: 25px; border-radius: 15px; margin-bottom: 25px;">
+                <h2>Options</h2>
+                <ul style="padding-left: 20px;">
+                    <li>-r (reverse) Sort in reverse order (descending).</li>
+                    <li>-n (numeric sort) Sort numerically.</li>
+                    <li>-b Ignore leading whitespace in lines.</li>
+                    <li>-f Perform a case-insensitive sort.</li>
+                    <li>-u (unique) Output only unique lines (remove duplicates).</li>
+                </ul>
+
+            </div>
+            
+
+            <button onclick="display(8)">Next chapter</button>
+
+
+        </section>
+        <section id="s8" class="hidden">
+            <button onclick="display(7)">Previous chapter</button>
+            <h2>#9 diff,uniq</h2>
+            <p>In Ubuntu and other Linux-based systems, the diff and uniq commands are used for comparing and manipulating text data. They serve different purposes, with diff used for comparing files or directories, and uniq used for filtering out duplicate lines from a sorted text file. Here's an overview of how each command works:</p>
+            <h2>1 diff command</h2>
+            <p>The diff command is used to compare two text files or directories and report the differences between them. It highlights lines that are unique to each file and lines that are different in content. This command is useful for identifying changes between different versions of a file or for comparing the contents of two directories.</p>
+            <div class="container">
+                <div class="container_terminal"></div>
+                <div class="terminal_toolbar">
+                    <div class="butt">
+                        <button class="btn btn-color"></button>
+                        <button class="btn"></button>
+                        <button class="btn"></button>
+                    </div>
+                    <p class="user" style="margin-left: 20px;">Terminal</p>
+                </div>
+                <div class="terminal_body">
+                    <div class="terminal_promt">
+                        <span class="terminal_user">abdo@admin:</span>
+                        <span class="terminal_location">~</span>
+                        <span class="terminal_bling">$ diff file1.txt file2.txt</span>
+                        <span class="terminal_cursor"></span>
+                    </div>
+                </div>
+            </div>
+
+            <h2>2 uniq <command></h2>
+            <p>The uniq command is used to filter out duplicate lines from a sorted text file. It's often used in combination with other commands like sort to remove duplicate lines from a file.</p>
+            <div class="container">
+                <div class="container_terminal"></div>
+                <div class="terminal_toolbar">
+                    <div class="butt">
+                        <button class="btn btn-color"></button>
+                        <button class="btn"></button>
+                        <button class="btn"></button>
+                    </div>
+                    <p class="user" style="margin-left: 20px;">Terminal</p>
+                </div>
+                <div class="terminal_body">
+                    <div class="terminal_promt">
+                        <span class="terminal_user">abdo@admin:</span>
+                        <span class="terminal_location">~</span>
+                        <span class="terminal_bling">$ uniq file1.txt</span>
+                        <span class="terminal_cursor"></span>
+                    </div>
+                </div>
+            </div>
+            <p>or you cas use a pipe</p>
+            <div class="container">
+                <div class="container_terminal"></div>
+                <div class="terminal_toolbar">
+                    <div class="butt">
+                        <button class="btn btn-color"></button>
+                        <button class="btn"></button>
+                        <button class="btn"></button>
+                    </div>
+                    <p class="user" style="margin-left: 20px;">Terminal</p>
+                </div>
+                <div class="terminal_body">
+                    <div class="terminal_promt">
+                        <span class="terminal_user">abdo@admin:</span>
+                        <span class="terminal_location">~</span>
+                        <span class="terminal_bling">$ sort input.txt | uniq</span>
+                        <span class="terminal_cursor"></span>
+                    </div>
+                </div>
+            </div>
+
+            <h2>Wait what is a Pipe ??</h2>
+            <p>Basic pipe syntax :</p>
+            <div class="terminal_body">
+                <p>command1 | command2</p>
+            </div>
+            <br>
+            <ul style="padding-left: 20px;">
+                <li>command1 generates some output.</li>
+                <li>command2 receives that output as input via the pipe.</li>
+            </ul>
+
+            <h2>Redirecting Output with Pipes :</h2>
+            <p>You can use a pipe to redirect the output of a command to a file. For instance, to save the output of a command to a text file:</p>
+            <div class="terminal_body">
+                <p>command > output.txt</p>
+            </div>
+
+            <br>
+            <br>
+            
+            
+            
+
+
+            
+            <button onclick="display(9)">Next chapter</button>
+
+        </section>
+        <section id="s9" class="hidden">
+
+            <button onclick="display(8)">Previous chapter</button>
+
+            <h2>#10 output command :</h2>
+            <h2>1 echo</h2>
+            <p>In Ubuntu and other Linux-based systems, the echo command is used to print text or messages to the terminal. It is a simple and useful command for displaying information, variables, or text output in scripts, the terminal, or as part of shell commands. Here is the basic syntax and some common uses of the echo command:</p>
+            <div class="container">
+                <div class="container_terminal"></div>
+                <div class="terminal_toolbar">
+                    <div class="butt">
+                        <button class="btn btn-color"></button>
+                        <button class="btn"></button>
+                        <button class="btn"></button>
+                    </div>
+                    <p class="user" style="margin-left: 20px;">Terminal</p>
+                </div>
+                <div class="terminal_body">
+                    <div class="terminal_promt">
+                        <span class="terminal_user">abdo@admin:</span>
+                        <span class="terminal_location">~</span>
+                        <span class="terminal_bling">$ echo [OPTION] [STRING]</span>
+                        <span class="terminal_cursor"></span>
+                    </div>
+                </div>
+            </div>
+            <div style="background-color: rgba(255, 255, 255, 0.076); padding: 25px; border-radius: 15px; margin-bottom: 25px;">
+                <h2>Common echo Options :</h2>
+                <ul style="padding-left: 20px;">
+                    <li>-n: Do not append a newline character at the end of the output. This allows you to print </li>
+                    <li>-e: Enable interpretation of backslash escapes. It allows you to use escape sequences like \n for a newline or \t for a tab.</li>
+
+                </ul>
+                <p>Here's an example to illustrate the difference between echo and echo -n:</p>
+                <div class="terminal_body">
+                    <p>
+                        echo "Hello, world!" <br>
+                        echo -n "This is on the same line. " <br>
+                        echo "This is on the same line too." <br>
+                    </p>
+                </div>
+                <p>The result without -n</p>
+                <p>
+                    Hello, world! <br>
+                    This is on the same line. <br>
+                    This is on the same line too. <br>
+                </p>
+                <p>The result with -n</p>
+                <div class="terminal_body">
+                <p>
+                    Hello, world!This is on the same line. This is on the same line too.
+                </p>  
+                </div>
+                <br>
+                <p>using escape '-e'</p>
+                <div class="terminal_body">
+                    <p>echo -e "This is the first line.\nThis is the second line."</p>
+                </div>
+
+                
+            </div>
+            <h2>cat&more</h2>
+            <p>It seems like you want to learn more about the "cut" command in Linux or Unix-like operating systems. The "cut" command is used to extract specific sections of text from a file or from the output of another command. It can be very useful for text processing and data manipulation tasks. Here's a brief overview of the "cut" command and some common use cases:</p>
+            <div class="container">
+                <div class="container_terminal"></div>
+                <div class="terminal_toolbar">
+                    <div class="butt">
+                        <button class="btn btn-color"></button>
+                        <button class="btn"></button>
+                        <button class="btn"></button>
+                    </div>
+                    <p class="user" style="margin-left: 20px;">Terminal</p>
+                </div>
+                <div class="terminal_body">
+                    <div class="terminal_promt">
+                        <span class="terminal_user">abdo@admin:</span>
+                        <span class="terminal_location">~</span>
+                        <span class="terminal_bling">$ cut [OPTION].. [File_Name]..</span>
+                        <span class="terminal_cursor"></span>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div style="background-color: rgba(255, 255, 255, 0.076); padding: 25px; border-radius: 15px; margin-bottom: 25px;">
+                <h2>
+                    Common options
+                </h2>
+                <p>
+                    -c, --characters: Specifies a list of characters, ranges, or bytes to cut. <br>
+                    -f, --fields: Specifies fields separated by a delimiter (usually tabs or spaces). <br>
+                    -d, --delimiter: Specifies the delimiter character for field-based cutting. <br>
+                </p>
+                <p>Exemples :</p>
+                <h2>Cut by Characters:</h2>
+                <p>To extract the first 5 characters from each line of a file:</p>
+                <div class="container">
+                    <div class="container_terminal"></div>
+                    <div class="terminal_toolbar">
+                        <div class="butt">
+                            <button class="btn btn-color"></button>
+                            <button class="btn"></button>
+                            <button class="btn"></button>
+                        </div>
+                        <p class="user" style="margin-left: 20px;">Terminal</p>
+                    </div>
+                    <div class="terminal_body">
+                        <div class="terminal_promt">
+                            <span class="terminal_user">abdo@admin:</span>
+                            <span class="terminal_location">~</span>
+                            <span class="terminal_bling">$ cut -c 1-5 filename.txt</span>
+                            <span class="terminal_cursor"></span>
+                        </div>
+                    </div>
+                    <br>
+                    <h2>Cut by Fields:</h2>
+                    <p>To extract the 2nd field (delimited by a space) from a file:</p>
+                    <div class="container">
+                        <div class="container_terminal"></div>
+                        <div class="terminal_toolbar">
+                            <div class="butt">
+                                <button class="btn btn-color"></button>
+                                <button class="btn"></button>
+                                <button class="btn"></button>
+                            </div>
+                            <p class="user" style="margin-left: 20px;">Terminal</p>
+                        </div>
+                        <div class="terminal_body">
+                            <div class="terminal_promt">
+                                <span class="terminal_user">abdo@admin:</span>
+                                <span class="terminal_location">~</span>
+                                <span class="terminal_bling">$ cut -f 2 -d ' ' filename.txt</span>
+                                <span class="terminal_cursor"></span>
+                            </div>
+                        </div>
+                </div>
+                <br>
+                <h2>Cut from a Stream: </h2>
+                <P>data.txt</P>
+                <div class="terminal_body">
+                    
+                    <p>
+                        John,Doe,35,New York <br>
+                        Jane,Smith,28,Los Angeles <br>
+                        Bob,Johnson,42,Chicago <br>
+                    </p>
+                </div>
+                <div class="container">
+                    <div class="container_terminal"></div>
+                    <div class="terminal_toolbar">
+                        <div class="butt">
+                            <button class="btn btn-color"></button>
+                            <button class="btn"></button>
+                            <button class="btn"></button>
+                        </div>
+                        <p class="user" style="margin-left: 20px;">Terminal</p>
+                    </div>
+                    <div class="terminal_body">
+                        <div class="terminal_promt">
+                            <span class="terminal_user">abdo@admin:</span>
+                            <span class="terminal_location">~</span>
+                            <span class="terminal_bling">$ cut -d ',' -f 1,3 data.txt</span>
+                            <span class="terminal_cursor"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="terminal_body">
+                    <p>
+                        John,35 <br>
+                        Jane,28 <br>
+                        Bob,42 <br>
+                    </p>
+                </div>
+                <p>In this example, -d ',' specifies that the comma (,) is the delimiter, and -f 1,3 instructs cut to extract the first and third fields.</p>
+
+            </div>
+
+            <h2>Open :</h2>
+            <p>To open a file in Ubuntu, you can use various graphical file managers or command-line tools, depending on your preferences and the type of file you want to open. Here are some common methods:</p>
+            <div class="container">
+                <div class="container_terminal"></div>
+                <div class="terminal_toolbar">
+                    <div class="butt">
+                        <button class="btn btn-color"></button>
+                        <button class="btn"></button>
+                        <button class="btn"></button>
+                    </div>
+                    <p class="user" style="margin-left: 20px;">Terminal</p>
+                </div>
+                <div class="terminal_body">
+                    <div class="terminal_promt">
+                        <span class="terminal_user">abdo@admin:</span>
+                        <span class="terminal_location">~</span>
+                        <span class="terminal_bling">$ open file_name</span>
+                        <span class="terminal_cursor"></span>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <br>
+            <button onclick="display(10)">Next chapter</button>
+
+        </section>
+        <section>
+
+        </section>
+
+
+        
+
+
+    </main>
+    <script src="/app2.js"></script>
+</body>
+</html>
