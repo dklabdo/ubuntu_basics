@@ -147,21 +147,13 @@ main{
 
 
 
-.my{
-    position: relative;
-    left: 50%;
-    transform: translateX(-50%);
 
-}
 
 .data2{
     top: 50px;
     width: fit-content;
-    position: relative;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: orange;
     padding: 25px 20px;
-    height: 300px;
+    height: 600px;
     border-radius: 10px;
+    overflow-y: scroll;
 }   

@@ -4,5 +4,5 @@ document.getElementById('form').addEventListener('submit',(e)=>{e.preventDefault
 
 
 function chekTask(val){
-    console.log(answer.value);
+    
 }
