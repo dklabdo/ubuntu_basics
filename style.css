@@ -128,14 +128,13 @@ main{
     
   }
   .card {
-    width: 90%;
+    width: 80%;
     height: 220px;
     background: rgb(46, 44, 44);
     transition: all 300ms;
     border-radius: 20px;
     display: flex;
     flex-direction: column;
-    padding: 20px;
     align-items: center;
     justify-content: center;
     gap: 25px;
@@ -212,7 +211,7 @@ main{
     background-color: transparent;
   }
 
-  
+
    
    
 
