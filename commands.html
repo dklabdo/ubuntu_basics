@@ -1241,7 +1241,181 @@
             <button onclick="display(10)">Next chapter</button>
 
         </section>
-        <section>
+        <section id="s10" class="hidden">
+            <button onclick="display(9)">Previous chapter</button>
+            <h2>Permision and chmod</h2>
+            <p>In Ubuntu and other Linux-based operating systems, file and directory permissions are an essential aspect of the system's security and access control. Permissions dictate who can read, write, or execute a file or directory.</p>
+            <p style="color: orange;">There are three types of access restrictions: </p>
+            <ol style="padding: 25px;">
+                <li>read : view the file or the directory content (r or 4)</li>
+                <li>write : edit the file content or create and remove files from directory (w or 2)</li>
+                <li>execute : for files we have running programs and scripts for directory cd into the directory (x or 1)</li>
+            </ol>
+            <p style="color: orange;">There are also three types of user restrictions:</p>
+            <ol style="padding-left: 25px;">
+                <li>owner  -rwx------</li>
+                <li>groupe ----rwx---</li>
+                <li>other  -------rwx</li>
+            </ol>
+            <br>
+            <h2>chmod</h2>
+            <p>chmod is a command in Ubuntu and other Linux-based operating systems used to change the permissions of files and directories. It allows you to control who can read, write, and execute a file or directory. The basic syntax for chmod is:</p>
+            <div class="container">
+                <div class="container_terminal"></div>
+                <div class="terminal_toolbar">
+                    <div class="butt">
+                        <button class="btn btn-color"></button>
+                        <button class="btn"></button>
+                        <button class="btn"></button>
+                    </div>
+                    <p class="user" style="margin-left: 20px;">Terminal</p>
+                </div>
+                <div class="terminal_body">
+                    <div class="terminal_promt">
+                        <span class="terminal_user">abdo@admin:</span>
+                        <span class="terminal_location">~</span>
+                        <span class="terminal_bling">$ chmod options permissions file</span>
+                        <span class="terminal_cursor"></span>
+                    </div>
+                </div>
+            </div>
+            <p> <span style="color: orange;">permissions</span>: This specifies the new permissions you want to set for the file or directory. Permissions are represented using a combination of letters (u for user, g for group, and o for others) and symbols (+ for adding permissions, - for removing permissions, and = for setting them exactly). </p>
+            <br>
+            <p>To give the owner read and write permissions for a file named example.txt :</p>
+            <div class="container">
+                <div class="container_terminal"></div>
+                <div class="terminal_toolbar">
+                    <div class="butt">
+                        <button class="btn btn-color"></button>
+                        <button class="btn"></button>
+                        <button class="btn"></button>
+                    </div>
+                    <p class="user" style="margin-left: 20px;">Terminal</p>
+                </div>
+                <div class="terminal_body">
+                    <div class="terminal_promt">
+                        <span class="terminal_user">abdo@admin:</span>
+                        <span class="terminal_location">~</span>
+                        <span class="terminal_bling">$ chmod u+rw example.txt</span>
+                        <span class="terminal_cursor"></span>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <p>To remove read and write permissions for the group on a directory named mydir:</p>
+            <div class="container">
+                <div class="container_terminal"></div>
+                <div class="terminal_toolbar">
+                    <div class="butt">
+                        <button class="btn btn-color"></button>
+                        <button class="btn"></button>
+                        <button class="btn"></button>
+                    </div>
+                    <p class="user" style="margin-left: 20px;">Terminal</p>
+                </div>
+                <div class="terminal_body">
+                    <div class="terminal_promt">
+                        <span class="terminal_user">abdo@admin:</span>
+                        <span class="terminal_location">~</span>
+                        <span class="terminal_bling">$ chmod g-rw mydir</span>
+                        <span class="terminal_cursor"></span>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <p>To grant execute permission to others for a script called myscript.sh:</p>
+            <div class="container">
+                <div class="container_terminal"></div>
+                <div class="terminal_toolbar">
+                    <div class="butt">
+                        <button class="btn btn-color"></button>
+                        <button class="btn"></button>
+                        <button class="btn"></button>
+                    </div>
+                    <p class="user" style="margin-left: 20px;">Terminal</p>
+                </div>
+                <div class="terminal_body">
+                    <div class="terminal_promt">
+                        <span class="terminal_user">abdo@admin:</span>
+                        <span class="terminal_location">~</span>
+                        <span class="terminal_bling">$ chmod o+x myscript.sh</span>
+                        <span class="terminal_cursor"></span>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <p>To make a script executable for everyone:</p>
+            <div class="container">
+                <div class="container_terminal"></div>
+                <div class="terminal_toolbar">
+                    <div class="butt">
+                        <button class="btn btn-color"></button>
+                        <button class="btn"></button>
+                        <button class="btn"></button>
+                    </div>
+                    <p class="user" style="margin-left: 20px;">Terminal</p>
+                </div>
+                <div class="terminal_body">
+                    <div class="terminal_promt">
+                        <span class="terminal_user">abdo@admin:</span>
+                        <span class="terminal_location">~</span>
+                        <span class="terminal_bling">$ chmod +x myscript.sh</span>
+                        <span class="terminal_cursor"></span>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <p>To recursively give the owner read and write permissions for a directory and its contents:</p>
+            <div class="container">
+                <div class="container_terminal"></div>
+                <div class="terminal_toolbar">
+                    <div class="butt">
+                        <button class="btn btn-color"></button>
+                        <button class="btn"></button>
+                        <button class="btn"></button>
+                    </div>
+                    <p class="user" style="margin-left: 20px;">Terminal</p>
+                </div>
+                <div class="terminal_body">
+                    <div class="terminal_promt">
+                        <span class="terminal_user">abdo@admin:</span>
+                        <span class="terminal_location">~</span>
+                        <span class="terminal_bling">$ chmod -R u+rw mydir</span>
+                        <span class="terminal_cursor"></span>
+                    </div>
+                </div>
+            </div>
+
+            <br>
+            <p>u can use (r,w,x) or (4,2,1) </p>
+            <div class="container">
+                <div class="container_terminal"></div>
+                <div class="terminal_toolbar">
+                    <div class="butt">
+                        <button class="btn btn-color"></button>
+                        <button class="btn"></button>
+                        <button class="btn"></button>
+                    </div>
+                    <p class="user" style="margin-left: 20px;">Terminal</p>
+                </div>
+                <div class="terminal_body">
+                    <div class="terminal_promt">
+                        <span class="terminal_user">abdo@admin:</span>
+                        <span class="terminal_location">~</span>
+                        <span class="terminal_bling">$ chmod 644 filename</span>
+                        <span class="terminal_cursor"></span>
+                    </div>
+                </div>
+            </div>
+            
+            <p>
+                6 : for user (read 4) + (write 2) <br>
+                4 : for groupe (read4) <br>
+                4 : for other (read4)
+            </p>
+
+
+
 
         </section>
 
